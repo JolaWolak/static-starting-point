@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 module.exports = router;
 
-const models = require('./models');
+const models = require('../models');
 const Hotel = models.Hotel;
 const Restaurant = models.Restaurant;
 const Activity = models.Activity;
@@ -25,7 +25,7 @@ router.get('/', function (req, res, next) {
 								allRestaurants: information[1],
 								allActivities: information[2]
 							}
-		});	
+		);	
 	})
 	.catch(next);
 
